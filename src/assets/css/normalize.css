@@ -1,0 +1,12 @@
+:root {
+    font-size: 10px;
+}
+
+html, body, #app {
+    height: 100%;
+}
+
+body {
+    font-family: "circular-light";
+    font-size: 1.5rem;
+}
