@@ -7,3 +7,8 @@
     font-family: "circular-book";
     src: url("/font/Circular-Book.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: "circular-bold";
+    src: url("/font/Circular-Bold.woff2") format("woff2");
+}

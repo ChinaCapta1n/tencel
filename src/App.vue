@@ -2,6 +2,7 @@
 
   <!-- header -->
   <nav-header />
+  <router-view></router-view>
 
 </template>
 
