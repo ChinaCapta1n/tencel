@@ -12,8 +12,13 @@ body {
     font-size: 1.5rem;
 }
 
-input {
+input, button {
     border: none;
-    background-color: none;
+    background-color: #fff;
     outline: none;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
 }

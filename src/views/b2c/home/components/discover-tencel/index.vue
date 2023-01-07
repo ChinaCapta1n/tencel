@@ -39,29 +39,15 @@
             </div>
         </div>
 
-        <div class="sustainability">
-            <h2 class="sustainability-title">sustainability</h2>
-            <p class="sustainability-desc">TENCEL™ fibers help maintain environmental balance by being integrated into
-                nature´s cycle</p>
-            <div class="btn-box">
-                <button class="nature">TENCEL™ & nature’s cycle</button>
-                <button class="technology">REFIBRA™ technology</button>
-            </div>
-        </div>
-        <div class="where-to-buy">
-            <h2>where to buy us</h2>
-            <p>Check out our branding partners who use our TENCEL™ branded fibers in their products!</p>
-            <button class="view-all-btn">
-                View all brands
-            </button>
-        </div>
+
+
+
     </div>
 </template>
-<script setup></script>
+<script setup>
+</script>
 <style lang="less" scoped>
 .discover-tencel {
-
-
     .discover-tencel-tm {
         background-image: url(/images/curve.png);
         padding-top: 10rem;
@@ -131,52 +117,6 @@
         }
     }
 
-    .sustainability {
-        width: 90.4%;
-        margin-left: auto;
-        margin-right: auto;
-        height: 0 auto;
-        transform: translateY(-100px);
-        padding: calc(10.15vw) 0 0;
 
-        .sustainability-title {
-            margin: 2.4rem 0;
-            font-size: 4.8rem;
-            color: var(--primary-color);
-            font-family: circular-bold;
-            text-align: center;
-        }
-
-        .sustainability-desc {
-            margin: auto;
-            text-align: center;
-            font-family: lenzing;
-            font-size: 1.6rem;
-        }
-
-        .btn-box {
-            margin-top: 3rem;
-            height: 8rem;
-            display: flex;
-            justify-content: center;
-
-            button {
-                display: block;
-                margin: 0 1rem;
-                line-height: 1.5;
-                height: 8rem;
-                border: 6px solid var(--primary-color);
-                border-radius: 10rem;
-                font-size: 2.4rem;
-                padding: 1.5rem 4rem;
-                font-family: circular-bold;
-                cursor: pointer;
-                background-color: #fff;
-                color: var(--primary-color);
-                font-weight: 700;
-            }
-        }
-
-    }
 }
 </style>

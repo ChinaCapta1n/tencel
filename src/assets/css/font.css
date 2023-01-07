@@ -12,3 +12,8 @@
     font-family: "circular-bold";
     src: url("/font/Circular-Bold.woff2") format("woff2");
 }
+
+@font-face {
+    font-family: "lenzing";
+    src: url("/font/lenzing.woff2") format("woff2");
+}
