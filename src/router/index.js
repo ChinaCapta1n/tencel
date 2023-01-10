@@ -7,7 +7,15 @@ const router = createRouter({
     routes: [
         {
             path: '/',
-            component: Home
+            component: Home,
+        },
+        {
+            path: '/product',
+            component: () => import('../views/b2c/products/index.vue')
+        },
+        {
+            path: '/luxe',
+            component: () => import('../views/b2c/products/luxe/index.vue')
         }
     ]
 })

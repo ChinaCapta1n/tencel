@@ -1,5 +1,5 @@
 <template>
-    <button class="read-more">
+    <button class="read-more" :style="{ backgroundColor: backgroundColor }">
         <a :href="link">
             <slot></slot>
         </a>
@@ -11,6 +11,10 @@ defineProps({
     link: {
         type: String,
         default: "javascript:;"
+    },
+    backgroundColor: {
+        type: String,
+        default: "transparent"
     }
 })
 </script>

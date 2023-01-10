@@ -8,7 +8,7 @@
             <button class="technology">REFIBRA™ technology</button>
         </div>
         <div class="sustainability-swiper">
-            <swiper :modules="modules" slidesPerView='auto' :speed="200" :autoplay="{ delay: 0 }"
+            <swiper :modules="modules" :freeMode="true" slidesPerView='auto' :speed="200" :autoplay="{ delay: 0 }"
                 :mousewheel="{ mousewheel: true, releaseOnEdges: true }">
                 <swiper-slide>
                     <h2>
@@ -70,8 +70,8 @@ const modules = [Mousewheel];
     margin-left: auto;
     margin-right: auto;
     height: 0 auto;
-    transform: translateY(-100px);
-    padding: calc(10.15vw) 0 0;
+    transform: translateY(-200px);
+    padding: 10.15vw 0 0;
 
     .sustainability-swiper {
         margin-top: 6rem;
