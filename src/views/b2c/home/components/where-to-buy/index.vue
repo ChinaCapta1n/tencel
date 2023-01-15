@@ -58,7 +58,7 @@
     </div>
 </template>
 <script setup>
-import ViewAllBrands from '../../../../../components/read-more/index.vue';
+import ViewAllBrands from '../../../../../components/b2c/read-more/index.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/less';
 </script>

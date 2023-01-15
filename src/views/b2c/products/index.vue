@@ -56,7 +56,7 @@
     </div>
 </template>
 <script setup>
-import ReadMoreButton from '../../../components/read-more/index.vue';
+import ReadMoreButton from '../../../components/b2c/read-more/index.vue';
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/less';
