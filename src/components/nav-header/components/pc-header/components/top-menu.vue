@@ -175,7 +175,6 @@ onUnmounted(() => {
 
             .close-gray,
             .search-input {
-
                 opacity: 1;
             }
         }

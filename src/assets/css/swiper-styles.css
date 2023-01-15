@@ -55,3 +55,42 @@
 .home .sustainability .sustainability-swiper .swiper .swiper-wrapper .swiper-slide img:hover {
     transform: scale(1.2);
 }
+
+
+
+
+
+
+
+
+.products .galleries .swiper .swiper-wrapper {
+    align-items: center;
+}
+
+.products .galleries .swiper .swiper-wrapper .swiper-slide:nth-of-type(1) {
+    width: 35rem;
+}
+
+.products .galleries .swiper .swiper-wrapper .swiper-slide:nth-of-type(2) {
+    height: 35vw;
+    min-height: 18.5rem;
+    width: 67%;
+    display: flex;
+    align-items: center;
+}
+
+.products .galleries .swiper .swiper-wrapper .swiper-slide:nth-of-type(2) img {
+    width: 100%;
+}
+
+.products .galleries .swiper .swiper-wrapper .swiper-slide:nth-of-type(3) {
+    width: 67%;
+    height: 30vw;
+    min-height: 18.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.products .galleries .swiper .swiper-wrapper .swiper-slide:nth-of-type(3) img {
+    width: 100%;
+}

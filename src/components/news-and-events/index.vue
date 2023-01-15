@@ -4,7 +4,7 @@
         <div class="swiper-container">
             <h2 class="news-and-events-title">news & events</h2>
             <swiper :modules="modules" :watch-slides-progress="true" :slides-per-view="3.4" :space-between="80"
-                @swiper="onSwiper" @slide-change="calculateProgress">
+                @swiper="onSwiper">
 
                 <swiper-slide class="news-and-events-swiper-slide">
                     <div class="box">
@@ -107,7 +107,7 @@ const progress = ref(null);
 
 
 const onSwiper = swiper => {
-    calculateProgress(swiper)
+    // calculateProgress(swiper)
     allSwipers.value = swiper.$wrapperEl[0].children.length;
     const heightArr = []
     swiper.slides.forEach(item => {
@@ -119,12 +119,12 @@ const onSwiper = swiper => {
     })
 }
 
-const calculateProgress = (swiper) => {
-    progress.value.style.width = (swiper.activeIndex + 1) / (allSwipers.value * 100) + 'px';
-}
+// const calculateProgress = (swiper) => {
+//     progress.value.style.width = (swiper.activeIndex + 1) / (allSwipers.value * 100) + 'px';
+// }
 
 onMounted(() => {
-    calculateProgress();
+    // calculateProgress();
 })
 
 
