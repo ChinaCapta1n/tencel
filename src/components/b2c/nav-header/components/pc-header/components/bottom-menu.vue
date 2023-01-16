@@ -20,20 +20,15 @@
                     </ul>
                 </li>
 
-                <li class="tencel-for-business">
-                    <a href="javascript:;" class="left-business">
-                        TENCEL™ for business
-                    </a>
-                    <a href="javascript:;" class="right-business">
-                        TENCEL™ for business
-                    </a>
-                </li>
+                <tencel-for-b2c />
             </ul>
         </div>
     </div>
 </template>
 
 <script setup>
+import TencelForB2c from '../../../../../commons/tencel-for-b2b-b2c/index.vue'
+
 const navData = [
     {
         "id": 0,
@@ -189,55 +184,7 @@ const navData = [
             align-items: center;
             flex-wrap: wrap;
 
-            .tencel-for-business {
-                height: 4rem;
-                background-color: #fff;
-                border-radius: 10rem;
-                border: 1px solid var(--primary-color);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-                overflow: hidden;
 
-                &:hover {
-                    .left-business {
-                        left: 0;
-                    }
-
-                    .right-business {
-                        transform: translateX(100%);
-                    }
-                }
-
-                .left-business {
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 100%;
-                    transition: all .3s;
-                    color: #fff;
-                    background-color: var(--primary-color);
-                }
-
-                .right-business {
-                    transition: all .3s;
-                }
-
-
-                a {
-                    color: var(--primary-color);
-                    font-weight: 400;
-                    font-family: circular-book;
-                    display: block;
-                    height: 100%;
-                    padding: 1.2rem;
-                    text-align: center;
-                    font-size: 1.5rem;
-                    letter-spacing: 1px;
-                    text-shadow: rgba(255, 255, 255, .3);
-                }
-            }
 
             .dropdown-menu-item {
                 margin-right: 4rem;

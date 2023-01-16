@@ -2,12 +2,12 @@ import { defineStore } from "pinia";
 
 const useHeader = defineStore('header', {
     state: () => ({
-        height: undefined,
+        height: '',
         flag: true,
     }),
     actions: {
         setHeight() {
-            this.height = window.getComputedStyle(document.getElementById('header'), null).height;
+            this.height = document.getElementById('header').offsetHeight + 'px';
         },
         setFlag() {
             this.flag = false;

@@ -1,9 +1,25 @@
 <template>
-    b2b header
-    <router-view></router-view>
+    <b2b-header />
+    <main :style="{ marginTop: store.height }">
+        <router-view></router-view>
+    </main>
+
     b2b footer
+    <aside-menu />
 </template>
-<script setup></script>
+<script setup>
+import B2bHeader from '../../components/b2b/nav-header/index.vue';
+import AsideMenu from '../../components/b2c/aside-menu/index.vue';
+
+import useHeader from '../../stores/modules/header.js';
+import { onMounted } from 'vue';
+
+const store = useHeader();
+
+onMounted(() => {
+    store.setHeight();
+})
+</script>
 <style lang="less" scoped>
 
 </style>

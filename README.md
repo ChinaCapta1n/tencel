@@ -1,11 +1,16 @@
-# Vue 3 + Vite
+## tencel
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+对前一家公司维护过的一个网站进行重构。
+原项目前端设计到的主要技术：gulp、pug、jq、craftCMS
+重构使用的技术：vue3 和 vue3 相关生态圈
+为何选择 vue3？一是 vue3 是目前其中一个主流的前端框架，拥有丰富的生态圈。二是我就熟悉 vue3。。。
+为什么要进行重构？项目起得不是很好，一个是 gulp tasks 太混乱，导入了很多插件，却没有使用，也没有 babel。一个是声明关键字使用多种，var、let、const，导致整个文件夹看着有点混乱。一个是 gulp 的 tasks 有部分可以合并为一个 task 却分开了
+。
 
 ## fixed bugs
 
 1. 侧边栏没有清除定时器，导致第二次开始，速度加快
+
+## 重构思路
+
+1. 网站分 b2c 和 b2b 两部分，在文件结构和路由上进行设计
