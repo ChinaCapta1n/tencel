@@ -48,7 +48,7 @@ import ArrowDown from '../../commons/arrow-down/index.vue';
 </script>
 <style lang="less" scoped>
 .header {
-    // background-color: #EEEFE9;
+    background-color: #fff;
     z-index: 999;
     top: 0;
     width: 100%;
@@ -132,6 +132,7 @@ import ArrowDown from '../../commons/arrow-down/index.vue';
                     &>li {
                         padding-top: 0.9vw;
                         margin-left: 2.08vw;
+                        display: flex;
 
                         &:nth-child(1) {
                             margin-left: 0;
@@ -144,6 +145,10 @@ import ArrowDown from '../../commons/arrow-down/index.vue';
 
                             @media screen and (min-width: 930px) {
                                 font-size: calc(11px + 7 * ((100vw - 930px) / 990));
+                            }
+
+                            @media screen and (min-width: 1920px) {
+                                font-size: 2rem;
                             }
                         }
                     }
