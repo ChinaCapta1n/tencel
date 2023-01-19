@@ -14,7 +14,7 @@ import DiscoverTencel from './components/discover-tencel/index.vue';
 import Sustainability from './components/sustainability/index.vue';
 import WhereToBuy from './components/where-to-buy/index.vue';
 import TencelGlobal from '../../../components/b2c/instagram/index.vue';
-import NewsAndEvents from '../../../components/b2c/news-and-events/index.vue';
+import NewsAndEvents from '../../../components/commons/news-and-events/index.vue';
 
 </script>
 <style lang="less" scoped>

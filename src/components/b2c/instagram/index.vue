@@ -43,7 +43,7 @@
     </div>
 </template>
 <script setup>
-import ReadMoreButton from '../read-more/index.vue';
+import ReadMoreButton from '../../commons/read-more/index.vue';
 </script>
 <style lang="less" scoped>
 .instagram-section {

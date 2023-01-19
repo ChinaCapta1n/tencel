@@ -20,28 +20,7 @@
                     <li><a href="javascript:;">sustainability</a></li>
                     <li><a href="javascript:;">news & events</a></li>
                 </ul>
-                <ul class="footer-icons">
-                    <li><a href="javascript:;">
-                            <img @mouseenter="footerIconAnimationFn" src="/images/footer-icons/social_linkedin.png"
-                                alt="">
-                        </a></li>
-                    <li><a href="javascript:;">
-                            <img @mouseenter="footerIconAnimationFn" src="/images/footer-icons/social_facebook.png"
-                                alt="">
-                        </a></li>
-                    <li><a href="javascript:;">
-                            <img @mouseenter="footerIconAnimationFn" src="/images/footer-icons/social_youtube.png"
-                                alt="">
-                        </a></li>
-                    <li><a href="javascript:;">
-                            <img @mouseenter="footerIconAnimationFn" src="/images/footer-icons/social_instagram.png"
-                                alt="">
-                        </a></li>
-                    <li><a href="javascript:;">
-                            <img @mouseenter="footerIconAnimationFn" src="/images/footer-icons/icon-pinterest.jpg"
-                                alt="">
-                        </a></li>
-                </ul>
+                <footer-icons />
             </div>
             <div class="contact-us">
                 <div class="contact-us-left">
@@ -70,33 +49,14 @@
             </div>
         </div>
         <div class="right">
-            <div class="box">
-                <p class="newsletter">newsletter</p>
-                <h2 class="about-tencel">get the latest news about TENCEL™</h2>
-                <div class="newsletter-input">
-                    <input type="text" placeholder="Hello@email.com" />
-                    <img class="arrow-right-white" src="/images/footer-icons/arrow-right-white.svg" alt="">
-                </div>
-            </div>
+            <get-the-latest-newsletter />
         </div>
     </footer>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-const timer = ref(null);
-const footerIconAnimationFn = (event) => {
-    if (event.srcElement.classList.contains('scale')) {
-        event.srcElement.classList.remove('scale');
-    } else {
-        event.srcElement.classList.add('scale');
-        timer.value = setTimeout(() => {
-            event.srcElement.classList.remove('scale');
-        }, 500)
-    }
-
-}
-
+import GetTheLatestNewsletter from '../../commons/footer/get-the-latest-newsletter.vue';
+import FooterIcons from '../../commons/footer/footer-icons.vue';
 
 
 </script>
@@ -110,7 +70,6 @@ const footerIconAnimationFn = (event) => {
         width: 70.5%;
         display: flex;
         flex-direction: column;
-
 
         .contact-us,
         .copyright,
@@ -178,46 +137,6 @@ const footerIconAnimationFn = (event) => {
             }
         }
 
-        .footer-icons {
-            padding-right: .5rem;
-            display: flex;
-            justify-content: flex-end;
-
-            li {
-
-                a {
-                    display: block;
-                    margin-bottom: 1rem;
-                    margin-left: 2rem;
-                    width: 6rem;
-                    height: 6rem;
-
-                    img {
-                        transform: scale(1);
-                        transition: transform .5s linear;
-
-                        &.scale {
-                            animation: scaleAnimation 0.5s linear;
-                        }
-                    }
-
-                    @keyframes scaleAnimation {
-                        0% {
-                            transform: scale(1);
-                        }
-
-                        50% {
-                            transform: scale(1.2);
-                        }
-
-                        100% {
-                            transform: scale(1);
-                        }
-                    }
-                }
-            }
-        }
-
         .link {
             display: flex;
 
@@ -263,73 +182,6 @@ const footerIconAnimationFn = (event) => {
         justify-content: center;
         align-items: center;
         text-align: left;
-
-        .box {
-            color: #fff;
-            padding-left: 10rem;
-            width: 100%;
-
-            .newsletter {
-                font-size: 1.4rem;
-                text-transform: lowercase;
-                font-family: circular-book;
-                margin-bottom: 1rem;
-            }
-
-            .about-tencel {
-                font-size: 2.8rem;
-                font-family: circular-bold;
-                width: 70%;
-                margin-bottom: 3rem;
-            }
-
-            .newsletter-input {
-                position: relative;
-                max-width: 41.9rem;
-                width: 90%;
-
-                .arrow-right-white {
-                    position: absolute;
-                    top: 50%;
-                    right: 3rem;
-                    transform: translateY(-50%);
-                    width: 2rem;
-                    height: 1.5rem;
-                    cursor: pointer;
-                }
-
-                input {
-                    width: 100%;
-                    height: 7.4rem;
-                    border-radius: 10rem;
-                    padding: 2rem 0 2rem 3.5rem;
-                    background-color: #39926b;
-                    color: #fff;
-                    font-size: 1.8rem;
-                    font-family: circular-book;
-
-                    &::-webkit-input-placeholder {
-                        /*WebKit browsers*/
-                        color: RGB(127, 185, 159);
-                        font-size: 2rem;
-                    }
-
-                    &::-moz-input-placeholder {
-                        /*Mozilla Firefox*/
-                        color: RGB(127, 185, 159);
-                        font-size: 2rem;
-                    }
-
-                    &::-ms-input-placeholder {
-                        /*Internet Explorer*/
-                        color: RGB(127, 185, 159);
-                        font-size: 2rem;
-                    }
-                }
-            }
-        }
-
-
     }
 }
 </style>

@@ -14,7 +14,7 @@
     </div>
 </template>
 <script setup>
-import OgButton from '../../../../../components/visit-button/index.vue';
+import OgButton from '../../../../../components/commons/visit-button/index.vue';
 
 const BeInspiredData = [
     {

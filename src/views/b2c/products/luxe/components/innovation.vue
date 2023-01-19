@@ -13,7 +13,7 @@
     </div>
 </template>
 <script setup>
-import VisitButton from '../../../../../components/visit-button/index.vue';
+import VisitButton from '../../../../../components/commons/visit-button/index.vue';
 </script>
 <style lang="less" scoped>
 .innovation {
