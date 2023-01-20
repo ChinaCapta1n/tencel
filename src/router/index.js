@@ -48,6 +48,10 @@ const router = createRouter({
                             path: '/home',
                             component: B2bHome,
                             alias: '/b2b'
+                        },
+                        {
+                            path: '/b2b/product',
+                            component: () => import('../views/b2b/products-and-technologies/products/index.vue')
                         }
                     ]
                 }
