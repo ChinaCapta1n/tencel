@@ -9,7 +9,7 @@
 
     <!-- aside menu -->
     <aside-menu />
-    >
+
 </template>
 <script setup>
 import NavHeader from '../../components/b2c/nav-header/index.vue';

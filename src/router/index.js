@@ -36,7 +36,7 @@ const router = createRouter({
         },
         {
             path: '/b2b',
-            redirect: '/b2b-laytou',
+            redirect: '/b2b-layout',
             children: [
                 {
                     path: '/b2b-layout',
@@ -47,11 +47,51 @@ const router = createRouter({
                         {
                             path: '/home',
                             component: B2bHome,
-                            alias: '/b2b'
+                            alias: '/b2b',
                         },
                         {
                             path: '/b2b/product',
                             component: () => import('../views/b2b/products-and-technologies/products/index.vue')
+                        },
+
+                        // branded-offers
+                        {
+                            path: '/b2b/branded-offers/general',
+                            component: () => import('../views/b2b/branded-offers/general/index.vue')
+                        },
+                        {
+                            path: '/b2b/branded-offers/tencel-denim',
+                            component: () => import('../views/b2b/branded-offers/tencel-denim/index.vue')
+                        },
+                        {
+                            path: '/b2b/branded-offers/tencel-intimate',
+                            component: () => import('../views/b2b/branded-offers/tencel-intimate/index.vue')
+                        },
+                        {
+                            path: '/b2b/branded-offers/tencel-active',
+                            component: () => import('../views/b2b/branded-offers/tencel-active/index.vue')
+                        },
+                        {
+                            path: '/b2b/branded-offers/tencel-home',
+                            component: () => import('../views/b2b/branded-offers/tencel-home/index.vue')
+                        },
+                        {
+                            path: '/b2b/branded-offers/tencel-footwear',
+                            component: () => import('../views/b2b/branded-offers/tencel-footwear/index.vue')
+                        },
+                        {
+                            path: '/b2b/branded-offers/tencel-luxe',
+                            component: () => import('../views/b2b/branded-offers/tencel-luxe/index.vue')
+                        },
+                        // explore tencel
+                        {
+                            path: '/b2b/about',
+                            component: () => import('../views/b2b/explore-tencel/about/index.vue')
+                        },
+                        // where to source
+                        {
+                            path: '/b2b/where-to-source',
+                            component: () => import('../views/b2b/where-to-source/index.vue')
                         }
                     ]
                 }
