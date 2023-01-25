@@ -29,6 +29,10 @@ const router = createRouter({
                         {
                             path: '/product',
                             component: () => import('../views/b2c/products/index.vue')
+                        },
+                        {
+                            path: '/true-carbon-zero',
+                            component: () => import('../views/b2c/our-campaigns/true-carbon-zero/index.vue')
                         }
                     ]
                 }
