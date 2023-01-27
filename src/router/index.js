@@ -33,6 +33,11 @@ const router = createRouter({
                         {
                             path: '/true-carbon-zero',
                             component: () => import('../views/b2c/our-campaigns/true-carbon-zero/index.vue')
+                        },
+                        // refibra
+                        {
+                            path: '/refibra',
+                            component: () => import('../views/b2c/refibra/index.vue')
                         }
                     ]
                 }

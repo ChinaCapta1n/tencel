@@ -94,3 +94,13 @@
 .products .galleries .swiper .swiper-wrapper .swiper-slide:nth-of-type(3) img {
     width: 100%;
 }
+
+
+
+/* true carbon zero */
+.golds-offset .container .bottom .offset-swiper .swiper-slide {
+    padding-bottom: 25px;
+    max-width: 460px;
+    box-shadow: 0 5px 30px rgb(0 0 0 / 8%);
+    height: auto;
+}

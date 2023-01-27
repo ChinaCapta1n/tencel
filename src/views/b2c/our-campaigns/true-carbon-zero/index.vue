@@ -15,6 +15,8 @@
 
         <golds-offset />
 
+        <key-benefits />
+
     </div>
 </template>
 <script setup>
@@ -25,8 +27,11 @@ import Golds from './components/golds.vue';
 import GoldsReduce from './components/golds-reduce.vue';
 import GoldsEngage from './components/golds-engage.vue';
 import GoldsOffset from './components/golds-offset.vue';
+import KeyBenefits from './components/key-benefits.vue';
 
 </script>
 <style lang="less" scoped>
-
+.true-carbon-zero {
+    padding-bottom: 14rem;
+}
 </style>
