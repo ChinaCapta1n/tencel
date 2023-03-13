@@ -134,5 +134,25 @@ const modules = [Mousewheel];
             font-weight: 700;
         }
     }
+
+    @media screen and (max-width: 930px) {
+        transform: translateY(0);
+        .sustainability-title {
+            font-size: 3.2rem;
+        }
+
+        .sustainability-title, .sustainability-desc {
+            text-align: left;
+        }
+
+        .btn-box {
+            flex-direction: column;
+            height: auto;
+            button {
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+            }
+        }
+    }
 }
 </style>

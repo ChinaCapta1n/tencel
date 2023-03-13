@@ -1,6 +1,6 @@
 <template>
     <!-- header -->
-    <nav-header />
+    <!-- <nav-header /> -->
 
     <router-view></router-view>
 
@@ -8,7 +8,7 @@
     <home-footer />
 
     <!-- aside menu -->
-    <aside-menu />
+    <!-- <aside-menu /> -->
 
 </template>
 <script setup>

@@ -79,15 +79,17 @@
                     </div>
                 </swiper-slide>
             </swiper>
+
+            <div class="progress-bar">
+            <div ref="progress" class="progress"></div>
+        </div>
         </div>
 
         <div class="navigation-bar">
 
         </div>
 
-        <div class="progress-bar">
-            <div ref="progress" class="progress"></div>
-        </div>
+        
 
         <div class="read-more-box">
             <read-more-button>view all news</read-more-button>
@@ -134,9 +136,6 @@ onMounted(() => {
     background-color: #F3F3F3;
     margin-top: 10rem;
     padding: 8.5rem 10rem;
-    ;
-
-
 
     .swiper-container {
         cursor: pointer;
@@ -168,7 +167,7 @@ onMounted(() => {
 
                     .read-more {
                         position: absolute;
-                        bottom: 0;
+                        bottom: 5%;
                         left: 0;
                         transition: all 0.5s;
                     }
@@ -184,26 +183,32 @@ onMounted(() => {
 
                 .swiper-slide-text {
                     color: #000;
-                    font-size: 2.65rem;
+                    font-size: calc(9px + 19 * ((100vw - 580px)/1340));
                     font-family: circular-book;
                     margin-bottom: 10rem;
                     transition: all 0.5s;
+
+                    @media screen and (min-width: 1670px) {
+                        font-size: 2.4rem;
+                    }
                 }
+            }
+        }
+
+        .progress-bar {
+            background-color: #e2e2e2;
+            margin-top: 1rem;
+            height: .2rem;
+
+            .progress {
+                width: 20%;
+                height: 100%;
+                background-color: var(--primary-color);
             }
         }
     }
 
-    .progress-bar {
-        background-color: #e2e2e2;
-        margin-top: 1rem;
-        height: .2rem;
-
-        .progress {
-            width: 20%;
-            height: 100%;
-            background-color: var(--primary-color);
-        }
-    }
+    
 
     .read-more-box {
         margin-top: 4rem;
@@ -211,6 +216,43 @@ onMounted(() => {
 
         &:hover button {
             color: var(--primary-color);
+        }
+    }
+
+    @media screen and (max-width: 930px) {
+        padding: 30px 0;
+        margin-top: 60px;
+        .swiper-container {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .news-and-events-title {
+                font-size: 3rem;
+            }
+
+            .swiper {
+                margin-bottom: 4rem;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        height: 200px !important;
+                        width: 250px;
+                        margin-right: 0 !important;
+                        .box {
+                            p {
+                                font-size: 1.8rem;
+                                font-family: circular-book;
+                                margin-bottom: 14.5px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                min-height: 69px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

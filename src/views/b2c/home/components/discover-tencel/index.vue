@@ -117,6 +117,51 @@
         }
     }
 
+    @media screen and (max-width: 930px) {
+        .photos {
+            flex-direction: column;
+            margin: 20px !important;
+            padding-bottom: 0 !important;
+            .column {
+                display: flex;
+                flex-direction: column;
+                    & > a {
+                        margin: 0 0 30px !important;
+                    height: 160px;
+                    img {
+                        object-fit: cover;
+                    }
+                };
+            }
+        }
+
+        .discover-tencel-tm {
+            background-size: 140px 140px;
+            padding-top: 80px;
+            padding-bottom: 30px;
+            & > .h2 {
+                font-size: 50px;
+                margin: 0;
+                padding-left: 40px;
+                .discover {
+                    font-size: 3.4rem;
+                }
+                display: flex;
+                flex-direction: column;
+            }
+
+            .description {
+                margin: 0;
+                padding: 0 20px;
+                max-width: 683px;
+                p {
+                    font-size: 1.8rem;
+                    font-family: lenzing;
+                }
+            }
+        }
+    }
+
 
 }
 </style>

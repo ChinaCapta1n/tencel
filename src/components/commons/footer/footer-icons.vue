@@ -71,5 +71,11 @@ const footerIconAnimationFn = (event) => {
             }
         }
     }
+
+    @media screen and (max-width: 800px) {
+        width: 100% !important;
+        justify-content: center;
+        padding: 1rem 0;
+    }
 }
 </style>

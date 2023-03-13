@@ -104,5 +104,16 @@ import 'swiper/less';
         margin-top: 1.45rem;
         margin-bottom: 6rem;
     }
+
+    @media screen and (max-width: 930px) {
+        margin-top: 2rem;
+        .container {
+            margin: 0;
+
+            .where-to-buy-title {
+                font-size: 3rem;
+            }
+        }
+    }
 }
 </style>

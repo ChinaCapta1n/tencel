@@ -2,24 +2,29 @@
     <footer class="footer" id="footer">
         <div class="left">
             <div class="link">
-                <ul class="regular-link-1">
-                    <li><a href="javascript:;">General</a></li>
-                    <li><a href="javascript:;">Denim</a></li>
-                    <li><a href="javascript:;">Intimate</a></li>
-                    <li><a href="javascript:;">Active</a></li>
-                </ul>
-                <ul class="regular-link-2">
-                    <li><a href="javascript:;">Home</a></li>
-                    <li><a href="javascript:;">Luxe</a></li>
-                    <li><a href="javascript:;">Footwear</a></li>
-                </ul>
-                <ul class="special-link">
-                    <li><a href="javascript:;">REFIBRA™</a></li>
-                    <li><a href="javascript:;">where to buy</a></li>
-                    <li><a href="javascript:;">about TENCEL™</a></li>
-                    <li><a href="javascript:;">sustainability</a></li>
-                    <li><a href="javascript:;">news & events</a></li>
-                </ul>
+                <div class="regular">
+                    <div class="regular-wrapper">
+                        <ul class="regular-link-1">
+                            <li><a href="javascript:;">General</a></li>
+                            <li><a href="javascript:;">Denim</a></li>
+                            <li><a href="javascript:;">Intimate</a></li>
+                            <li><a href="javascript:;">Active</a></li>
+                        </ul>
+                        <ul class="regular-link-2">
+                            <li><a href="javascript:;">Home</a></li>
+                            <li><a href="javascript:;">Luxe</a></li>
+                            <li><a href="javascript:;">Footwear</a></li>
+                        </ul>
+                    </div>
+                    
+                    <ul class="special-link">
+                        <li><a href="javascript:;">REFIBRA™</a></li>
+                        <li><a href="javascript:;">where to buy</a></li>
+                        <li><a href="javascript:;">about TENCEL™</a></li>
+                        <li><a href="javascript:;">sustainability</a></li>
+                        <li><a href="javascript:;">news & events</a></li>
+                    </ul>
+                </div>
                 <footer-icons />
             </div>
             <div class="contact-us">
@@ -139,7 +144,6 @@ import FooterIcons from '../../commons/footer/footer-icons.vue';
 
         .link {
             display: flex;
-
             .regular-link-1,
             .regular-link-2,
             .special-link {
@@ -153,18 +157,34 @@ import FooterIcons from '../../commons/footer/footer-icons.vue';
                 }
             }
 
-            .regular-link-1 {
-                width: 15%;
-            }
+            .regular {
+                display: flex;
+                width: 100%;
+                .regular-wrapper {
+                    display: flex;
+                    width: 50%;
+                    .regular-link-1, .regular-link-2 {
+                        width: 100%;
+                    }
+                }
 
-            .regular-link-2 {
-                width: 26.25%;
+                .regular-link-1 {
+                    width: 15%;
+                }
+
+                .regular-link-2 {
+                    width: 100% !important;
+                }
             }
 
             .footer-icons {
                 width: 45%;
                 display: flex;
                 flex-wrap: wrap;
+
+                @media screen and (min-width: 801px) {
+                    min-width: 180px;
+                }
             }
         }
     }
@@ -182,6 +202,77 @@ import FooterIcons from '../../commons/footer/footer-icons.vue';
         justify-content: center;
         align-items: center;
         text-align: left;
+    }
+
+    @media screen and (max-width: 800px) {
+        flex-direction: column-reverse;
+        .left, .right {
+            width: 100%;
+        }
+
+        .left {
+            flex-direction: column;
+
+            .link {
+                flex-direction: column-reverse;
+                margin-left: 0;
+                width: 100%;
+                padding: 20px 40px;
+                .regular {
+                    width: 100%;
+                    .regular-wrapper {
+                        flex-direction: column;
+                    }
+                    .regular-wrapper, .special-link {
+                        width: 50% !important;
+                    }
+                }
+            }
+
+            .contact-us {
+                padding: 20px 40px;
+                margin-bottom: 20px;
+                margin-left: 0;
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .copyright {
+                padding: 0 40px;
+                margin-left: 0;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+
+                .copyright-links {
+                    margin-left: 0;
+                    padding-left: 0;
+                    justify-content: flex-start;
+                }
+
+                .copyright-text {
+                    margin-bottom: 1.95rem;
+                }
+            }
+        }
+        
+        .right {
+            padding: 30px 0 40px;
+
+            .box {
+                width: 100%;
+                padding: 0 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        .right {
+            padding-left: 30px;
+            text-align: left;
+            .box {
+                padding-left: 0;
+            }
+        }
     }
 }
 </style>

@@ -96,5 +96,14 @@ import ReadMoreButton from '../../commons/read-more/index.vue';
             margin-bottom: 3rem;
         }
     }
+
+    @media screen and (max-width: 930px) {
+        padding-top: 5rem;
+        .container {
+            .title {
+                text-align: left;
+            }
+        }
+    }
 }
 </style>
